@@ -1,0 +1,11 @@
+{
+    "name": "hexlet/code",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Dr4gonet",
+            "email": "dr4gonet@yandex.ru"
+        }
+    ],
+    "require": {}
+}
