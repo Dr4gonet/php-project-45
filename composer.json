@@ -1,11 +1,15 @@
 {
     "name": "hexlet/code",
     "type": "project",
+    "description": "my first study project BRAIN GAMES",
     "authors": [
         {
             "name": "Dr4gonet",
             "email": "dr4gonet@yandex.ru"
         }
+    ],
+    "bin": [
+        "bin/brain-games"
     ],
     "require": {}
 }
