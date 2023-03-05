@@ -34,8 +34,7 @@ function calc()
         if ($answer === $correctAnswer) {
             line('Correct!');
             } else {
-            line("'%d' is wrong answer ;(.", $answer);
-            line("Correct answer was '%d'.", $correctAnswer);
+            line("'%d' is wrong answer ;(. Correct answer was '%d'.", $answer, $correctAnswer);
             return line("Let's try again, %s!", $name);
         }
     }
