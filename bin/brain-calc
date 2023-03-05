@@ -1,0 +1,9 @@
+#!/usr/bin/env php
+<?php
+
+use function BrainGames\Games\Calc\calc;
+use function BrainGames\Engine\welcomeUser;
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+calc();
