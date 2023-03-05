@@ -26,7 +26,7 @@ function even()
             line('Correct!');
             $number = rand(1, 20);
         } else {
-            line("'%s' is wrong answer ;(. Correct answer was 'no'.", $answer);
+            line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $correctanswer);
             return line("Let's try again, %s!", $name);
         }
     }
