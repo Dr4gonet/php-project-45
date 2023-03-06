@@ -14,20 +14,22 @@ function calc()
     for ($i = 0; $i < 3; $i += 1) {
         $number1 = rand(1, 25);
         $number2 = rand(1, 20);
+        $count = rand(1, 3);
 
-        $ans1 = $number1 + $number2;
-        $ans2 = $number1 - $number2;
-        $ans3 = $number1 * $number2;
-
-        $exp1 = $number1 . ' + ' . $number2;
-        $exp2 = $number1 . ' - ' . $number2;
-        $exp3 = $number1 . ' * ' . $number2;
-        $arrrayExpression = [$exp1, $exp2, $exp3];
-
-        $arrayAnswer = [$ans1, $ans2, $ans3];
-        $index = array_rand($arrayAnswer);
-        $correctAnswer = (string) $arrayAnswer[$index];
-        $expression = $arrrayExpression[$index];
+        switch ($count) {
+            case 1:
+                $expression = $number1 . ' + ' . $number2;
+                $correctAnswer = (string) ($number1 + $number2);
+                break;
+            case 2:
+                $expression = $number1 . ' - ' . $number2;
+                $correctAnswer = (string) ($number1 - $number2);
+                break;
+            case 3:
+                $expression = $number1 . ' * ' . $number2;
+                $correctAnswer = (string) ($number1 * $number2);
+                break;
+        }
 
         line("Question, %s", $expression);
         $answer = prompt('Your answer');
