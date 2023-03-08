@@ -9,7 +9,7 @@ function calc()
 
     $task = 'What is the result of the expression?';
 
-    function arraytest(): array
+    function arrayCorrectAnswer(): array
     {
         $result = [];
         for ($i = 0; $i < 3; $i += 1) {
@@ -34,7 +34,7 @@ function calc()
         return $result;
     }
 
-    $array = arraytest();
+    $array = arrayCorrectAnswer();
 
     frame($task, $array);
 }
