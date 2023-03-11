@@ -12,8 +12,7 @@ function frame($task, $array)
     line("Hello, %s!", $name);
     line($task);
     for ($i = 1; $i < 4; $i += 1) {
-        
-        switch($i) {
+        switch ($i) {
             case 1:
                 $expression = $array[0][0];
                 $correctAnswer = (string) $array[0][1];
