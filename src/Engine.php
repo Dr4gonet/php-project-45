@@ -11,9 +11,9 @@ function frame($task, $array)
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     line($task);
-    for ($i = 0; $i < 3; $i += 1) {
-        $count = rand(1, 3);
-        switch ($count) {
+    for ($i = 1; $i < 4; $i += 1) {
+        
+        switch($i) {
             case 1:
                 $expression = $array[0][0];
                 $correctAnswer = (string) $array[0][1];
