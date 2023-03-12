@@ -11,7 +11,7 @@ function gcd()
     function nod($maxNumber, $minNumber)
     {
         //используем алгоритм Евклида для нахождения НОД
-        
+
         if ($maxNumber % $minNumber === 0) {
             return $minNumber;
         }
