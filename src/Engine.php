@@ -26,7 +26,7 @@ function frame($task, $array)
                 $correctAnswer = (string) $array[2][1];
                 break;
         }
-        line("Question, %s", $expression);
+        line("Question, %d", $expression);
         $answer = prompt('Your answer');
         if ($answer === $correctAnswer) {
             line('Correct!');
