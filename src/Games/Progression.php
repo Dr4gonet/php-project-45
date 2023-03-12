@@ -8,7 +8,7 @@ function progression()
 {
     $task = 'What number is missing in the progression?';
 
-    function collection($n)
+    function collection(int $n)
     {
         $element = rand(1, 50);
         $progression = [];

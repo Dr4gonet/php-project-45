@@ -20,7 +20,7 @@ function even()
             } else {
                 $correctAnswer = 'no';
             }
-                $result[] = [(int) $number, $correctAnswer];
+                $result[] = [$number, $correctAnswer];
         }
 
         return $result;

@@ -8,7 +8,7 @@ function prime()
 {
     $task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-    function arrayDivisor($number)
+    function arrayDivisor(int $number)
     {
         $result = [];
         for ($i = 1; $i <= $number; $i++) {

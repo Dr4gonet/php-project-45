@@ -8,7 +8,7 @@ function gcd()
 {
     $task = 'Find the greatest common divisor of given numbers.';
 
-    function nod($maxNumber, $minNumber)
+    function nod(int $maxNumber, int $minNumber)
     {
         //используем алгоритм Евклида для нахождения НОД
 
