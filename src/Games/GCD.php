@@ -6,7 +6,7 @@ use function BrainGames\Engine\frame;
 
 function gcd()
 {
-    $task = 'Find the greatest common divisor of given numbers';
+    $task = 'Find the greatest common divisor of given numbers.';
 
     function nod($maxNumber, $minNumber)
     {
