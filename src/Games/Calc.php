@@ -7,6 +7,8 @@ use function BrainGames\Engine\frame;
 function arrayCorrectAnswer(): array
 {
         $result = [];
+        $expression = '';
+        $correctAnswer = 0;
     for ($i = 0; $i < 3; $i += 1) {
         $number1 = rand(1, 25);
         $number2 = rand(1, 20);

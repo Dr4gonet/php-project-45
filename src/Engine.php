@@ -11,6 +11,8 @@ function frame(string $task, array $array)
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     line($task);
+    $answer = '';
+    $correctAnswer = '';
     for ($i = 1; $i < 4; $i += 1) {
         switch ($i) {
             case 1:
