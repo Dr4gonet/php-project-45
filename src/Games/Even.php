@@ -2,9 +2,9 @@
 
 namespace BrainGames\Games\Even;
 
-use function BrainGames\Engine\frame;
+use function BrainGames\Engine\shouldRunGame;
 
-function arrayCorrectAnswer(): array
+function getVariants(): array
 {
         $result = [];
         $correctAnswer = '';
@@ -21,12 +21,12 @@ function arrayCorrectAnswer(): array
         return $result;
 }
 
-function even()
+function shouldCalculateEven()
 {
 
     $task = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-    $array = arrayCorrectAnswer();
+    $variants = getVariants();
 
-    frame($task, $array);
+    shouldRunGame($task, $variants);
 }

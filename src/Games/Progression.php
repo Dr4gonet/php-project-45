@@ -2,26 +2,26 @@
 
 namespace BrainGames\Games\Progression;
 
-use function BrainGames\Engine\frame;
+use function BrainGames\Engine\shouldRunGame;
 
-function collection(int $n)
+function getProgression(int $progressionStep)
 {
-    $element = rand(1, 50);
+    $progressionElement = rand(1, 50);
     $progression = [];
     for ($i = 1; $i < 11; $i += 1) {
-        $element = $element + $n;
-        $progression[] = $element;
+        $progressionElement = $progressionElement + $progressionStep;
+        $progression[] = $progressionElement;
     }
     return $progression;
 }
 
-function arrayCorrectAnswer(): array
+function getVariants(): array
 {
     $result = [];
     for ($i = 0; $i < 3; $i += 1) {
-          $n = rand(2, 5);
+          $progressionStep = rand(2, 5);
           $index = rand(0, 9);
-          $arrayExpression = collection($n);
+          $arrayExpression = getProgression($progressionStep);
           $correctAnswer = $arrayExpression[$index];
           $arrayExpression[$index] = '..';
           $expression = implode(' ', $arrayExpression);
@@ -31,11 +31,11 @@ function arrayCorrectAnswer(): array
     return $result;
 }
 
-function progression()
+function shouldDisplayArithmeticProgression()
 {
     $task = 'What number is missing in the progression?';
 
-    $array = arrayCorrectAnswer();
+    $variants = getVariants();
 
-    frame($task, $array);
+    shouldRunGame($task, $variants);
 }

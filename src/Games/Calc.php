@@ -2,9 +2,9 @@
 
 namespace BrainGames\Games\Calc;
 
-use function BrainGames\Engine\frame;
+use function BrainGames\Engine\shouldRunGame;
 
-function arrayCorrectAnswer(): array
+function getVariants(): array
 {
         $result = [];
         $expression = '';
@@ -31,12 +31,12 @@ function arrayCorrectAnswer(): array
         return $result;
 }
 
-function calc()
+function shouldRunCalculator()
 {
 
     $task = 'What is the result of the expression?';
 
-    $array = arrayCorrectAnswer();
+    $variants = getVariants();
 
-    frame($task, $array);
+    shouldRunGame($task, $variants);
 }

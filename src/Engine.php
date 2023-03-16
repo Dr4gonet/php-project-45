@@ -5,7 +5,7 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function frame(string $task, array $array)
+function shouldRunGame(string $task, array $variants)
 {
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
@@ -13,27 +13,15 @@ function frame(string $task, array $array)
     line($task);
     $answer = '';
     $correctAnswer = '';
-    for ($i = 1; $i < 4; $i += 1) {
-        switch ($i) {
-            case 1:
-                $expression = $array[0][0];
-                $correctAnswer = (string) $array[0][1];
-                break;
-            case 2:
-                $expression = $array[1][0];
-                $correctAnswer = (string) $array[1][1];
-                break;
-            case 3:
-                $expression = $array[2][0];
-                $correctAnswer = (string) $array[2][1];
-                break;
-        }
-        line("Question: %s", $expression);
+    for ($i = 0; $i < 3; $i += 1) {
+        $expression = $variants[$i][0];
+        $correctAnswer = (string) $variants[$i][1];
+        line("Question: %s", (string) $expression);
         $answer = prompt('Your answer');
-        if ($answer === $correctAnswer) {
+        if ($answer === (string) $correctAnswer) {
             line('Correct!');
         } else {
-            line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $correctAnswer);
+            line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, (string) $correctAnswer);
             return line("Let's try again, %s!", $name);
         }
     }

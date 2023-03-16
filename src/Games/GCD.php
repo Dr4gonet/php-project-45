@@ -2,9 +2,9 @@
 
 namespace BrainGames\Games\GCD;
 
-use function BrainGames\Engine\frame;
+use function BrainGames\Engine\shouldRunGame;
 
-function nod(int $maxNumber, int $minNumber)
+function getGreatestCommonDivisor(int $maxNumber, int $minNumber)
 {
     //используем алгоритм Евклида для нахождения НОД
 
@@ -31,7 +31,7 @@ function nod(int $maxNumber, int $minNumber)
 }
 
 
-function arrayCorrectAnswer(): array
+function getVariants(): array
 {
     $result = [];
 
@@ -41,7 +41,7 @@ function arrayCorrectAnswer(): array
         $numberTwo = rand(1, 100);
         $maxNumber = max($numberOne, $numberTwo);
         $minNumber = min($numberOne, $numberTwo);
-        $correctAnswer = nod($maxNumber, $minNumber);
+        $correctAnswer = getGreatestCommonDivisor($maxNumber, $minNumber);
         $expression = $numberOne . ' ' . $numberTwo;
         $numberOne = rand(1, 100);
         $numberTwo = rand(1, 100);
@@ -52,11 +52,11 @@ function arrayCorrectAnswer(): array
 }
 
 
-function gcd()
+function shouldCalculateGreatestCommonDivisor()
 {
     $task = 'Find the greatest common divisor of given numbers.';
 
-    $array = arrayCorrectAnswer();
+    $variants = getVariants();
 
-    frame($task, $array);
+    shouldRunGame($task, $variants);
 }

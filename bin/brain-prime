@@ -2,11 +2,11 @@
 <?php
 
 
-use function BrainGames\Games\Prime\prime;
+use function BrainGames\Games\Prime\shouldDefinePrimeNumber;
 
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
 
-prime();
+shouldDefinePrimeNumber();
 

@@ -2,7 +2,7 @@
 
 namespace BrainGames\Games\Prime;
 
-use function BrainGames\Engine\frame;
+use function BrainGames\Engine\shouldRunGame;
 
 function arrayDivisor(int $number)
 {
@@ -18,7 +18,7 @@ function arrayDivisor(int $number)
 }
 
 
-function arrayCorrectAnswer(): array
+function getVariants(): array
 {
     $result = [];
     for ($i = 0; $i < 3; $i += 1) {
@@ -37,11 +37,11 @@ function arrayCorrectAnswer(): array
 }
 
 
-function prime()
+function shouldDefinePrimeNumber()
 {
     $task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-    $array = arrayCorrectAnswer();
+    $variants = getVariants();
 
-    frame($task, $array);
+    shouldRunGame($task, $variants);
 }
