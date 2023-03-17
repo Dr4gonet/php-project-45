@@ -18,10 +18,10 @@ function shouldRunGame(string $task, array $variants)
         $correctAnswer = (string) $variants[$i][1];
         line("Question: %s", (string) $expression);
         $answer = prompt('Your answer');
-        if ($answer === (string) $correctAnswer) {
+        if ($answer === $correctAnswer) {
             line('Correct!');
         } else {
-            line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, (string) $correctAnswer);
+            line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $correctAnswer);
             return line("Let's try again, %s!", $name);
         }
     }
