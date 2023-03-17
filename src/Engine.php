@@ -25,7 +25,6 @@ function shouldRunGame(string $task, array $variants)
             return line("Let's try again, %s!", $name);
         }
     }
-    if ($answer === $correctAnswer) {
+
         line("Congratulations, %s!", $name);
-    }
 }
