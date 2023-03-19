@@ -26,6 +26,9 @@ function variationOperation(int $number1, int $number2): array
             $expression = $number1 . ' * ' . $number2;
             $correctAnswer = $number1 * $number2;
             $variationOperation = [$expression, $correctAnswer];
+            break;
+        default:
+            echo 'Error: Unknown operation';
     }
             return $variationOperation;
 }
