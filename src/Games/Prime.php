@@ -2,9 +2,9 @@
 
 namespace BrainGames\Games\Prime;
 
-use function BrainGames\Engine\shouldRunGame;
+use function BrainGames\Engine\runGame;
 
-function arrayDivisor(int $number)
+function divisors(int $number)
 {
         $result = [];
     for ($i = 1; $i <= $number; $i++) {
@@ -23,15 +23,13 @@ function getVariants(): array
     $result = [];
     for ($i = 0; $i < 3; $i += 1) {
         $number = rand(1, 100);
-        $countDivisor = count(arrayDivisor($number));
+        $countDivisor = count(divisors($number));
         if ($countDivisor === 2) {
-            $expression = $number;
             $correctAnswer = 'yes';
         } else {
-            $expression = $number;
             $correctAnswer = 'no';
         }
-        $result[] = [$expression, $correctAnswer];
+        $result[] = [$number, $correctAnswer];
     }
     return $result;
 }
@@ -43,5 +41,5 @@ function shouldDefinePrimeNumber()
 
     $variants = getVariants();
 
-    shouldRunGame($task, $variants);
+    runGame($task, $variants);
 }

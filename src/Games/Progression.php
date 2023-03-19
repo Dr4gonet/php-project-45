@@ -2,7 +2,7 @@
 
 namespace BrainGames\Games\Progression;
 
-use function BrainGames\Engine\shouldRunGame;
+use function BrainGames\Engine\runGame;
 
 function getProgression(int $progressionStep)
 {
@@ -37,5 +37,5 @@ function shouldDisplayArithmeticProgression()
 
     $variants = getVariants();
 
-    shouldRunGame($task, $variants);
+    runGame($task, $variants);
 }

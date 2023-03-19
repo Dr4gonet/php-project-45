@@ -2,7 +2,7 @@
 
 namespace BrainGames\Games\Even;
 
-use function BrainGames\Engine\shouldRunGame;
+use function BrainGames\Engine\runGame;
 
 function getVariants(): array
 {
@@ -10,12 +10,8 @@ function getVariants(): array
         $correctAnswer = '';
     for ($i = 0; $i < 3; $i += 1) {
         $number = rand(1, 20);
-        if (($number % 2) === 0) {
-            $correctAnswer = 'yes';
-        } else {
-            $correctAnswer = 'no';
-        }
-            $result[] = [$number, $correctAnswer];
+        ($number % 2) === 0 ? $correctAnswer = 'yes' : $correctAnswer = 'no';
+         $result[] = [$number, $correctAnswer];
     }
 
         return $result;
@@ -28,5 +24,5 @@ function shouldCalculateEven()
 
     $variants = getVariants();
 
-    shouldRunGame($task, $variants);
+    runGame($task, $variants);
 }
