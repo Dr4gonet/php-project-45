@@ -1,8 +1,8 @@
 #!/usr/bin/env php
 <?php
 
-use function BrainGames\Games\GCD\shouldCalculateGreatestCommonDivisor;
+use function BrainGames\Games\GCD\calculateGreatestCommonDivisor;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-shouldCalculateGreatestCommonDivisor();
+calculateGreatestCommonDivisor();

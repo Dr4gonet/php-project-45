@@ -2,12 +2,12 @@
 <?php
 
 
-use function BrainGames\Games\Calc\shouldRunCalculator;
+use function BrainGames\Games\Calc\runCalculator;
 
 
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
 
-shouldRunCalculator();
+runCalculator();
 

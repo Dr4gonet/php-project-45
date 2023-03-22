@@ -8,16 +8,15 @@ function getVariants(): array
 {
         $result = [];
         $correctAnswer = '';
-    for ($i = 0; $i < 3; $i += 1) {
+    for ($i = 0; $i < NUMBER_OF_ROUNDS; $i += 1) {
         $number = rand(1, 20);
-        ($number % 2) === 0 ? $correctAnswer = 'yes' : $correctAnswer = 'no';
-         $result[] = [$number, $correctAnswer];
+        $correctAnswer = $number % 2 === 0 ? 'yes' : 'no';
+        $result[] = [$number, $correctAnswer];
     }
-
-        return $result;
+    return $result;
 }
 
-function shouldCalculateEven()
+function calculateEven()
 {
 
     $task = 'Answer "yes" if the number is even, otherwise answer "no".';

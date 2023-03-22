@@ -1,8 +1,8 @@
 #!/usr/bin/env php
 <?php
 
-use function BrainGames\Games\Progression\shouldDisplayArithmeticProgression;
+use function BrainGames\Games\Progression\displayArithmeticProgression;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-shouldDisplayArithmeticProgression();
+displayArithmeticProgression();

@@ -8,7 +8,8 @@ function getProgression(int $progressionStep)
 {
     $progressionElement = rand(1, 50);
     $progression = [];
-    for ($i = 1; $i < 11; $i += 1) {
+    $progressionlength = 10;
+    for ($i = 1; $i <= $progressionlength; $i += 1) {
         $progressionElement = $progressionElement + $progressionStep;
         $progression[] = $progressionElement;
     }
@@ -18,7 +19,7 @@ function getProgression(int $progressionStep)
 function getVariants(): array
 {
     $result = [];
-    for ($i = 0; $i < 3; $i += 1) {
+    for ($i = 0; $i < NUMBER_OF_ROUNDS; $i += 1) {
           $progressionStep = rand(2, 5);
           $index = rand(0, 9);
           $arrayExpression = getProgression($progressionStep);
@@ -31,7 +32,7 @@ function getVariants(): array
     return $result;
 }
 
-function shouldDisplayArithmeticProgression()
+function displayArithmeticProgression()
 {
     $task = 'What number is missing in the progression?';
 

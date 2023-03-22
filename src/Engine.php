@@ -5,6 +5,8 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
+define('NUMBER_OF_ROUNDS', '3');
+
 function runGame(string $task, array $variants)
 {
     line('Welcome to the Brain Games!');
@@ -13,8 +15,7 @@ function runGame(string $task, array $variants)
     line($task);
     $answer = '';
     $correctAnswer = '';
-    $numberOfRounds = 3;
-    for ($i = 0; $i < $numberOfRounds; $i += 1) {
+    for ($i = 0; $i < NUMBER_OF_ROUNDS; $i += 1) {
         $expression = $variants[$i][0];
         $correctAnswer = (string) $variants[$i][1];
         line("Question: %s", (string) $expression);
@@ -22,9 +23,8 @@ function runGame(string $task, array $variants)
         if ($answer !== $correctAnswer) {
             line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $correctAnswer);
             return line("Let's try again, %s!", $name);
-        } else {
-            line('Correct!');
         }
+        line('Correct!');
     }
     line("Congratulations, %s!", $name);
 }

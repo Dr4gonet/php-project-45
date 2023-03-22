@@ -14,14 +14,14 @@ function divisors(int $number)
             $result[] = $divisor;
         }
     }
-        return $result;
+    return $result;
 }
 
 
 function getVariants(): array
 {
     $result = [];
-    for ($i = 0; $i < 3; $i += 1) {
+    for ($i = 0; $i < NUMBER_OF_ROUNDS; $i += 1) {
         $number = rand(1, 100);
         $countDivisor = count(divisors($number));
         if ($countDivisor === 2) {
@@ -35,7 +35,7 @@ function getVariants(): array
 }
 
 
-function shouldDefinePrimeNumber()
+function definePrimeNumber()
 {
     $task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
