@@ -6,8 +6,8 @@ use function BrainGames\Engine\runGame;
 
 function getVariants(): array
 {
-        $result = [];
-        $correctAnswer = '';
+        //$result = [];
+        //$correctAnswer = '';
     for ($i = 0; $i < NUMBER_OF_ROUNDS; $i += 1) {
         $number = rand(1, 20);
         $correctAnswer = $number % 2 === 0 ? 'yes' : 'no';

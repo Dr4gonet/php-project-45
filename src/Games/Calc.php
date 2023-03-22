@@ -9,8 +9,8 @@ function variationOperation(int $number1, int $number2): array
     $variationOperation = [];
     $operation = ['+', '-', '*'];
     $index = array_rand($operation, 1);
-    $expression = '';
-    $correctAnswer = 0;
+    //$expression = '';
+    //$correctAnswer = 0;
 
     switch ($operation[$index]) {
         case '+':
