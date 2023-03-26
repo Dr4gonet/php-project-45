@@ -4,6 +4,8 @@ namespace BrainGames\Games\Prime;
 
 use function BrainGames\Engine\runGame;
 
+use const BrainGames\Engine\NUMBER_OF_ROUNDS;
+
 function divisors(int $number)
 {
         $result = [];
@@ -24,11 +26,7 @@ function getVariants(): array
     for ($i = 0; $i < NUMBER_OF_ROUNDS; $i += 1) {
         $number = rand(1, 100);
         $countDivisor = count(divisors($number));
-        if ($countDivisor === 2) {
-            $correctAnswer = 'yes';
-        } else {
-            $correctAnswer = 'no';
-        }
+        $correctAnswer = $countDivisor === 2 ? 'yes' : 'no';
         $result[] = [$number, $correctAnswer];
     }
     return $result;

@@ -4,6 +4,8 @@ namespace BrainGames\Games\Calc;
 
 use function BrainGames\Engine\runGame;
 
+use const BrainGames\Engine\NUMBER_OF_ROUNDS;
+
 function variationOperation(int $number1, int $number2): array
 {
     $variationOperation = [];
@@ -26,7 +28,7 @@ function variationOperation(int $number1, int $number2): array
             $variationOperation = [$expression, $correctAnswer];
             break;
         default:
-            echo 'Error: Unknown operation';
+            throw new \Exception('Unknown operation');
     }
     return $variationOperation;
 }

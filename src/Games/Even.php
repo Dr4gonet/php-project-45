@@ -4,6 +4,8 @@ namespace BrainGames\Games\Even;
 
 use function BrainGames\Engine\runGame;
 
+use const BrainGames\Engine\NUMBER_OF_ROUNDS;
+
 function getVariants(): array
 {
         $result = [];

@@ -4,6 +4,8 @@ namespace BrainGames\Games\GCD;
 
 use function BrainGames\Engine\runGame;
 
+use const BrainGames\Engine\NUMBER_OF_ROUNDS;
+
 function getGreatestCommonDivisor(int $numberOne, int $numberTwo)
 {
     $maxNumber = max($numberOne, $numberTwo);

@@ -4,8 +4,11 @@ namespace BrainGames\Games\Progression;
 
 use function BrainGames\Engine\runGame;
 
-function getProgression(int $progressionStep)
+use const BrainGames\Engine\NUMBER_OF_ROUNDS;
+
+function getProgression()
 {
+    $progressionStep = rand(2, 5);
     $progressionElement = rand(1, 50);
     $progression = [];
     $progressionlength = 10;
@@ -20,14 +23,13 @@ function getVariants(): array
 {
     $result = [];
     for ($i = 0; $i < NUMBER_OF_ROUNDS; $i += 1) {
-          $progressionStep = rand(2, 5);
-          $index = rand(0, 9);
-          $arrayExpression = getProgression($progressionStep);
-          $correctAnswer = $arrayExpression[$index];
-          $arrayExpression[$index] = '..';
-          $expression = implode(' ', $arrayExpression);
+        $index = rand(0, 9);
+        $progression = getProgression();
+        $correctAnswer = $progression[$index];
+        $progression[$index] = '..';
+        $expression = implode(' ', $progression);
 
-          $result[] = [$expression, $correctAnswer];
+        $result[] = [$expression, $correctAnswer];
     }
     return $result;
 }
