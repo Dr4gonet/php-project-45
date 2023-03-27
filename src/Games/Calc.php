@@ -6,7 +6,7 @@ use function BrainGames\Engine\runGame;
 
 use const BrainGames\Engine\NUMBER_OF_ROUNDS;
 
-function correctAnswer(int $number1, int $number2, $operation): int
+function correctAnswer(int $number1, int $number2, string $operation): int
 {
     switch ($operation) {
         case '+':
