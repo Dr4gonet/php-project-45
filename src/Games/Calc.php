@@ -6,9 +6,9 @@ use function BrainGames\Engine\runGame;
 
 use const BrainGames\Engine\NUMBER_OF_ROUNDS;
 
-function variationOperation(int $number1, int $number2, array &$operation, int &$index, string &$expression): array
+function correctAnswer(int $number1, int $number2, $operation): int
 {
-    switch ($operation[$index]) {
+    switch ($operation) {
         case '+':
             $correctAnswer = $number1 + $number2;
             break;
@@ -21,19 +21,20 @@ function variationOperation(int $number1, int $number2, array &$operation, int &
         default:
             throw new \Exception('Unknown operation');
     }
-    return [$expression, $correctAnswer];
+        return $correctAnswer;
 }
 
 function getVariants(): array
 {
         $variations = [];
     for ($i = 0; $i < NUMBER_OF_ROUNDS; $i += 1) {
-        $operation = ['+', '-', '*'];
-        $index = array_rand($operation, 1);
+        $operations = ['+', '-', '*'];
+        $index = array_rand($operations, 1);
+        $operation = $operations[$index];
         $number1 = rand(1, 25);
         $number2 = rand(1, 20);
-        $expression = $number1 . ' ' . $operation[$index] . ' '  . $number2;
-        $variations[$i] = variationOperation($number1, $number2, $operation, $index, $expression);
+        $expression = $number1 . ' ' . $operation . ' '  . $number2;
+        $variations[$i] = [$expression, correctAnswer($number1, $number2, $operation)];
     }
     return $variations;
 }
