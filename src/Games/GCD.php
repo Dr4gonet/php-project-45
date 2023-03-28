@@ -16,9 +16,7 @@ function getGreatestCommonDivisor(int $numberOne, int $numberTwo)
     if ($maxNumber % $minNumber === 0) {
         return $minNumber;
     }
-    if ($maxNumber % $minNumber === 1) {
-        return 1;
-    }
+
     while ($minNumber > 1) {
         $remainder = $maxNumber % $minNumber;
         $maxNumber = $minNumber;

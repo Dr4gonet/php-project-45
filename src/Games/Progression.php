@@ -12,8 +12,7 @@ function getProgression()
     $progressionElement = rand(1, 50);
     $progression = [];
     $progressionlength = 10;
-    for ($i = 1; $i <= $progressionlength; $i += 1) {
-        $progressionElement = $progressionElement + $progressionStep;
+    for ($i = 1; $i <= $progressionlength; $i += 1, $progressionElement += $progressionStep) {
         $progression[] = $progressionElement;
     }
     return $progression;

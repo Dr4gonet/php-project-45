@@ -21,12 +21,12 @@ function correctAnswer(int $number1, int $number2, string $operation): int
         default:
             throw new \Exception('Unknown operation');
     }
-        return $correctAnswer;
+    return $correctAnswer;
 }
 
 function getVariants(): array
 {
-        $variations = [];
+    $variations = [];
     for ($i = 0; $i < NUMBER_OF_ROUNDS; $i += 1) {
         $operations = ['+', '-', '*'];
         $index = array_rand($operations, 1);
@@ -41,7 +41,6 @@ function getVariants(): array
 
 function runCalculator()
 {
-
     $task = 'What is the result of the expression?';
 
     $variants = getVariants();

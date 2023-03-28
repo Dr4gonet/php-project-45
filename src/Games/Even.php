@@ -8,7 +8,7 @@ use const BrainGames\Engine\NUMBER_OF_ROUNDS;
 
 function getVariants(): array
 {
-        $result = [];
+    $result = [];
     for ($i = 0; $i < NUMBER_OF_ROUNDS; $i += 1) {
         $number = rand(1, 20);
         $correctAnswer = $number % 2 === 0 ? 'yes' : 'no';
@@ -19,7 +19,6 @@ function getVariants(): array
 
 function calculateEven()
 {
-
     $task = 'Answer "yes" if the number is even, otherwise answer "no".';
 
     $variants = getVariants();
