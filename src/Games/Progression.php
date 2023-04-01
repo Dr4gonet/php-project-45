@@ -8,12 +8,12 @@ use const BrainGames\Engine\NUMBER_OF_ROUNDS;
 
 function getProgression()
 {
-    $progressionStep = rand(2, 5);
-    $progressionElement = rand(1, 50);
+    $step = rand(2, 5);
+    $element = rand(1, 50);
     $progression = [];
-    $progressionlength = 10;
-    for ($i = 1; $i <= $progressionlength; $i += 1, $progressionElement += $progressionStep) {
-        $progression[] = $progressionElement;
+    $length = 10;
+    for ($i = 1; $i <= $length; $i += 1, $element += $step) {
+        $progression[] = $element;
     }
     return $progression;
 }
@@ -33,10 +33,8 @@ function getVariants(): array
     return $result;
 }
 
-function displayArithmeticProgression()
+function run($task)
 {
-    $task = 'What number is missing in the progression?';
-
     $variants = getVariants();
 
     runGame($task, $variants);

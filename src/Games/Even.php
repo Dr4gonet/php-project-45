@@ -17,10 +17,8 @@ function getVariants(): array
     return $result;
 }
 
-function calculateEven()
+function run($task)
 {
-    $task = 'Answer "yes" if the number is even, otherwise answer "no".';
-
     $variants = getVariants();
 
     runGame($task, $variants);

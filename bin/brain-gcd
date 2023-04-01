@@ -1,8 +1,10 @@
 #!/usr/bin/env php
 <?php
 
-use function BrainGames\Games\GCD\calculateGreatestCommonDivisor;
+use function BrainGames\Games\GCD\run;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-calculateGreatestCommonDivisor();
+$task = 'Find the greatest common divisor of given numbers.';
+
+run($task);

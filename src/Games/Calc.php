@@ -39,10 +39,8 @@ function getVariants(): array
     return $variations;
 }
 
-function runCalculator()
+function run($task)
 {
-    $task = 'What is the result of the expression?';
-
     $variants = getVariants();
 
     runGame($task, $variants);

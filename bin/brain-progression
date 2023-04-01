@@ -1,8 +1,10 @@
 #!/usr/bin/env php
 <?php
 
-use function BrainGames\Games\Progression\displayArithmeticProgression;
+use function BrainGames\Games\Progression\run;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-displayArithmeticProgression();
+$task = 'What number is missing in the progression?';
+
+run($task);

@@ -50,10 +50,8 @@ function getVariants(): array
 }
 
 
-function calculateGreatestCommonDivisor()
+function run($task)
 {
-    $task = 'Find the greatest common divisor of given numbers.';
-
     $variants = getVariants();
 
     runGame($task, $variants);

@@ -2,11 +2,12 @@
 <?php
 
 
-use function BrainGames\Games\Prime\definePrimeNumber;
+use function BrainGames\Games\Prime\run;
 
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
+$task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-definePrimeNumber();
+run($task);
 

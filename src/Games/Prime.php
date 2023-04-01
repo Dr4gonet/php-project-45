@@ -33,10 +33,8 @@ function getVariants(): array
 }
 
 
-function definePrimeNumber()
+function run($task)
 {
-    $task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-
     $variants = getVariants();
 
     runGame($task, $variants);
