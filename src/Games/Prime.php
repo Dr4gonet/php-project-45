@@ -33,7 +33,7 @@ function getVariants(): array
 }
 
 
-function run($task)
+function run(string $task)
 {
     $variants = getVariants();
 
