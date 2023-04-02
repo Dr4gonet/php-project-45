@@ -1,15 +1,15 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Dr4gonet/php-project-45/workflows/hexlet-check/badge.svg)](https://github.com/Dr4gonet/php-project-45/actions)
 
-### Study project "Brain Games"
+## Study project "Brain Games"
 
-## Installation
+### Installation
 
 Сlone the repository
 
 git@github.com:Dr4gonet/php-project-45.git
 
-## Games are launched by commands from the Makefile
+### Games are launched by commands from the Makefile
 
 
 <a href="https://codeclimate.com/github/Dr4gonet/php-project-45/maintainability"><img src="https://api.codeclimate.com/v1/badges/727b0353766fc1bbee53/maintainability" /></a>
