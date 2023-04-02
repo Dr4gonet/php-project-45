@@ -5,6 +5,4 @@ use function BrainGames\Games\Even\run;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$task = 'Answer "yes" if the number is even, otherwise answer "no".';
-
-run($task);
+run();

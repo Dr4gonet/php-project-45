@@ -5,6 +5,4 @@ use function BrainGames\Games\GCD\run;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$task = 'Find the greatest common divisor of given numbers.';
-
-run($task);
+run();
