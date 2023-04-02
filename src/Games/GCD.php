@@ -27,9 +27,6 @@ function getGreatestCommonDivisor(int $numberOne, int $numberTwo)
         if ($remainder === 0) {
             return $minNumber;
         }
-        if ($remainder === 1) {
-            return 1;
-        }
     }
     return $minNumber;
 }
