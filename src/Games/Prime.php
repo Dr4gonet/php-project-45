@@ -13,11 +13,10 @@ function getDivisors(int $number): array
     $result = [];
 
     for ($i = 1; $i <= $number; $i++) {
-        $divisor = $number / $i;
         $remainder = $number % $i;
 
         if ($remainder === 0) {
-            $result[] = $divisor;
+            $result[] = $i;
         }
     }
     return $result;
