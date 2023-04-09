@@ -18,4 +18,5 @@ brain-progression:
 	./bin/brain-progression
 brain-prime:
 	./bin/brain-prime
-		
+check:
+	./vendor/bin/phpstan analyse --level 5 src bin

@@ -33,7 +33,7 @@ function getVariants(): array
         $number1 = rand(1, 25);
         $number2 = rand(1, 20);
 
-        $expression = $number1 . ' ' . $operation . ' '  . $number2;
+        $expression = "$number1 $operation $number2";
 
         $variations[$i] = [$expression, correctAnswer($number1, $number2, $operation)];
     }

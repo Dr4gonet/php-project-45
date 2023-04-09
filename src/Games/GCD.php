@@ -8,27 +8,13 @@ use const BrainGames\Engine\NUMBER_OF_ROUNDS;
 
 const TASK = 'Find the greatest common divisor of given numbers.';
 
-function getGreatestCommonDivisor(int $numberOne, int $numberTwo)
+function getGreatestCommonDivisor(int $numberOne, int $numberTwo): int
 {
-    $maxNumber = max($numberOne, $numberTwo);
-    $minNumber = min($numberOne, $numberTwo);
-
     //используем алгоритм Евклида для нахождения НОД
-
-    if ($maxNumber % $minNumber === 0) {
-        return $minNumber;
+    if ($numberTwo !== 0) {
+        return getGreatestCommonDivisor($numberTwo, $numberOne % $numberTwo);
     }
-    while ($minNumber > 1) {
-        $remainder = $maxNumber % $minNumber;
-        $maxNumber = $minNumber;
-        $minNumber = $remainder;
-        $remainder = $maxNumber % $minNumber;
-
-        if ($remainder === 0) {
-            return $minNumber;
-        }
-    }
-    return $minNumber;
+    return $numberOne;
 }
 
 
